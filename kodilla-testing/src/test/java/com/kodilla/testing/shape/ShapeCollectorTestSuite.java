@@ -49,11 +49,11 @@ public class ShapeCollectorTestSuite {
 
     @Nested
     @DisplayName("Tests for getting shapes")
-    class GetShapeTest{
+    class GetShapeTest {
 
         @Test
         @DisplayName("Getting a shape at a valid index should return the correct shape")
-        void testValidIndex(){
+        void testValidIndex() {
 //            Given
             ShapeCollector collector = new ShapeCollector();
             collector.addFigure(new Square(2.0));
@@ -67,7 +67,7 @@ public class ShapeCollectorTestSuite {
 
         @Test
         @DisplayName("Getting a shape at an invalid index should return null")
-        void testInvalidIndex(){
+        void testInvalidIndex() {
 //            Given
             ShapeCollector collector = new ShapeCollector();
             collector.addFigure(new Square(2.0));
@@ -77,6 +77,20 @@ public class ShapeCollectorTestSuite {
 //            Then
             Assertions.assertTrue(shape == null);
 
+        }
+
+        @Test
+        @DisplayName("Show figures should return a string with shape names and areas")
+        void testShowFigures() {
+            ShapeCollector collector = new ShapeCollector();
+            collector.addFigure(new Square(2.0));
+            collector.addFigure(new Circle(3.0));
+            collector.addFigure(new Triangle(4.0, 6.0));
+
+            String expected = "Square:4.0,Circle:28.274333882308138,Triangle:12.0";
+            String result = collector.showFigures();
+
+            Assertions.assertEquals(expected, result);
         }
     }
 }

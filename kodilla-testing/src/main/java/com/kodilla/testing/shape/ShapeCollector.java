@@ -30,8 +30,18 @@ public class ShapeCollector {
         return shapes;
     }
 
-    public void showFigures() {
+    public String showFigures() {
+        StringBuilder result = new StringBuilder();
+        for (Shape shape:shapes){
+            result.append(shape.getShapeName()).append(":").append(shape.getField()).append(",");
+            }
+        if (result.length() > 0){
+            result.deleteCharAt(result.length() - 1);
+        }
+        return result.toString();
+
 
     }
+
 }
 
