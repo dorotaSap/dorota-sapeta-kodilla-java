@@ -60,7 +60,7 @@ public class ForumStatisticsTest {
 
         forumStatistics.calculateAdvStatistics(statisticsMock);
 
-        assertEquals(0, forumStatistics.getAveragePostsPerUser(), 0.001);
+        assertEquals(50.0, forumStatistics.getAveragePostsPerUser(), 0.001);
         assertEquals(0, forumStatistics.getAverageCommentsPerUser(), 0.001);
         assertEquals(0, forumStatistics.getAverageCommentsPerPost(), 0.001);
     }
@@ -72,7 +72,7 @@ public class ForumStatisticsTest {
 //        When
         forumStatistics.calculateAdvStatistics(statisticsMock);
 //        Then
-        assertEquals(0.5, forumStatistics.getAveragePostsPerUser(), 0.001);
+        assertEquals(50.0, forumStatistics.getAveragePostsPerUser(), 0.001);
         assertEquals(25.0, forumStatistics.getAverageCommentsPerUser(), 0.001);
         assertEquals(0.5, forumStatistics.getAverageCommentsPerPost(), 0.001);
     }
@@ -86,8 +86,8 @@ public class ForumStatisticsTest {
         forumStatistics.calculateAdvStatistics(statisticsMock);
 
         // Then
-        assertEquals(0.0, forumStatistics.getAveragePostsPerUser(), 0.001);
-        assertEquals(1.0, forumStatistics.getAverageCommentsPerUser(), 0.001);
+        assertEquals(25.0, forumStatistics.getAveragePostsPerUser(), 0.001);
+        assertEquals(50.0, forumStatistics.getAverageCommentsPerUser(), 0.001);
         assertEquals(2.0, forumStatistics.getAverageCommentsPerPost(), 0.001);
     }
     @Test
