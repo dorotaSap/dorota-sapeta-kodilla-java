@@ -1,4 +1,5 @@
 package com.kodilla.testing.library;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -61,7 +62,7 @@ public class BookDirectoryTestSuite {
 //        When
         List<Book> theListOfBooks0 = bookLibrary.listBooksWithCondition("ZeroBooks");
         List<Book> theListOfBooks15 = bookLibrary.listBooksWithCondition("Any title");
-        List<Book> theListOfBooks40 = bookLibrary.listBooksWithCondition("FourtyBooks");
+        List<Book> theListOfBooks40 = bookLibrary.listBooksWithCondition("FortyBooks");
 //        Then
         assertEquals(0, theListOfBooks0.size());
         assertEquals(15, theListOfBooks15.size());
