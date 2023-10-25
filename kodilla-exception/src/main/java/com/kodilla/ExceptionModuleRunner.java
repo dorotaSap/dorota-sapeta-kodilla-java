@@ -27,6 +27,7 @@ public class ExceptionModuleRunner {
 
         ExceptionHandling exceptionHandling = new ExceptionHandling();
         exceptionHandling.handleException(1.5, 1.5);
+
     }
 
 
