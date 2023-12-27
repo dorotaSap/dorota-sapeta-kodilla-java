@@ -1,6 +1,7 @@
 package com.kodilla.stream.array;
 
 import org.junit.jupiter.api.Test;
+import stream.array.ArrayOperations;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
